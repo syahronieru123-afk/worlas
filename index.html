@@ -1,28 +1,99 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WORLAS.IT - Aji Wahyu</title>
+<title>WORLAS.IT</title>
 <style>
-body{background:#0f0f0f;color:white;font-family:Arial;text-align:center;padding:20px}
-h1{font-size:40px;margin:10px}
-.box{background:#1c1c1c;border-radius:20px;padding:20px;max-width:400px;margin:auto}
-a.btn{display:block;background:white;color:black;text-decoration:none;padding:14px;margin:10px 0;border-radius:12px;font-weight:bold}
-a.btn:hover{background:#ffcc00}
-.small{color:#aaa;font-size:13px}
+body{background:#0f0f0f;color:white;font-family:Arial;text-align:center;padding:0;margin:0}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:15px 20px}
+.login-btn{background:#222;color:white;border:1px solid #555;padding:8px 15px;border-radius:20px;cursor:pointer;font-weight:bold}
+.box{background:#1e1e1e;max-width:400px;margin:10px auto 40px;padding:25px;border-radius:20px}
+.btn{display:block;background:#00aaff;color:white;padding:13px;margin:10px 0;border-radius:12px;text-decoration:none;font-weight:bold}
+input{width:90%;padding:12px;margin:8px;border-radius:10px;border:none}
+.masuk{width:95%;padding:12px;background:#00aaff;color:white;border:none;border-radius:10px;font-weight:bold;cursor:pointer}
+.card{background:#2a2a2a;padding:15px;border-radius:15px;text-align:left;margin:10px 0}
+#loginBox,#adminBox{display:none}
 </style>
 </head>
 <body>
-<div class="box">
+
+<div class="topbar">
+<div style="font-weight:bold">WORLAS.IT</div>
+<button class="login-btn" onclick="showLogin()">🔐 LOGIN</button>
+</div>
+
+<!-- MODE 1: PUBLIK -->
+<div class="box" id="publicBox">
 <img src="worlas_logo_1.png" style="width:200px;border-radius:15px">
 <h1>WORLAS.IT</h1>
 <p>Halo, aku <b>Aji Wahyu</b></p>
-<a class="btn" href="https://instagram.com/AJIWAHYU22">📸 Instagram - @AJIWAHYU22</a>
-<a class="btn" href="https://tiktok.com/@orangkeempat">🎵 TikTok - ORNG KE EMPAT</a>
-<a class="btn" href="https://youtube.com/@SYAHRONIERU">▶️ YouTube - SYAHRONI ERU</a>
-<a class="btn" href="https://wa.me/6281554246103">💬 Chat WA Aku</a>
+<a class="btn" href="https://instagram.com/ajiwahyu22">Instagram - AJIWAHYU22</a>
+<a class="btn" href="https://tiktok.com/@ORNGKEEMPAT">Tiktok - ORNG KE EMPAT</a>
+<a class="btn" href="https://youtube.com/@SYAHRONIERU">YouTube - SYAHRONI ERU</a>
 <a class="btn" href="https://mable.gg/u/mb0e9hx1?locale=en">🎮 MAIN / BELI GAME AKU DI MABLE</a>
-<p class="small">© 2026 WORLAS.IT - Dibuat oleh Aji Wahyu</p>
+<a class="btn" href="https://wa.me/6281554246103">Chat WA Aku</a>
 </div>
+
+<!-- MODE LOGIN -->
+<div class="box" id="loginBox">
+<h2>LOGIN ADMIN</h2>
+<p>Khusus Eruaja</p>
+<input id="user" placeholder="Nama">
+<input id="pass" type="password" placeholder="Password">
+<button class="masuk" onclick="login()">MASUK</button>
+<p id="pesan" style="color:red"></p>
+<button onclick="backPublic()" style="background:none;border:none;color:#aaa;cursor:pointer;margin-top:10px">← Balik ke Website</button>
+</div>
+
+<!-- MODE 2: ADMIN -->
+<div class="box" id="adminBox">
+<h2>SELAMAT DATANG, ERUAJA 👑</h2>
+<p>Ini ruang pribadi kamu.</p>
+<div class="card">
+<b>📋 DATA PRIBADI AKU</b><br><br>
+Nama: Aji Wahyu / Eruaja<br>
+Kota: Purwodadi<br>
+IG: @AJIWAHYU22<br>
+TikTok: ORNG KE EMPAT<br>
+YouTube: SYAHRONI ERU<br>
+Mable: mb0e9hx1
+</div>
+<div class="card">
+<b>📝 CATATAN PRIBADI</b><br><br>
+- Ide konten hari ini:<br>
+- Target followers:<br>
+- Uang masuk Mable:<br>
+</div>
+<div class="card">
+<b>🔗 LINK PENTING AKU</b><br><br>
+- Website Utama: /worlas/<br>
+- Mable: mable.gg/u/mb0e9hx1
+</div>
+<button class="masuk" onclick="logout()" style="background:#ff4444">KELUAR</button>
+</div>
+
+<script>
+function showLogin(){
+  document.getElementById("publicBox").style.display="none";
+  document.getElementById("adminBox").style.display="none";
+  document.getElementById("loginBox").style.display="block";
+}
+function backPublic(){
+  document.getElementById("loginBox").style.display="none";
+  document.getElementById("adminBox").style.display="none";
+  document.getElementById("publicBox").style.display="block";
+}
+function login(){
+  let u=document.getElementById("user").value;
+  let p=document.getElementById("pass").value;
+  if(u=="eruaja" && p=="1234"){
+    document.getElementById("loginBox").style.display="none";
+    document.getElementById("adminBox").style.display="block";
+  } else {
+    document.getElementById("pesan").innerText="Nama / Password salah!";
+  }
+}
+function logout(){ location.reload(); }
+</script>
 </body>
 </html>
