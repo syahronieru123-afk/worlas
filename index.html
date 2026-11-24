@@ -3,166 +3,252 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WORLAS.IT - Karya Aji Wahyu</title>
+<title>WORLAS.IT - Karya Web & Game 3D | Aji Wahyu</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f4f8ff;color:#1a2a44}
-header{background:#0b5ed7;color:white;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:99}
-.logo{font-weight:900;font-size:22px;letter-spacing:1px}
-.logo span{color:#ff3b30}
-nav{display:flex;gap:8px;align-items:center}
-.btn{background:white;color:#0b5ed7;border:0;padding:9px 14px;border-radius:20px;font-weight:700;cursor:pointer}
-.btn-red{background:#ff3b30;color:white}
-.hero{background:linear-gradient(135deg,#0b5ed7,#2a9bff);color:white;padding:40px 18px;text-align:center}
-.hero h1{font-size:32px;line-height:1.2}
-.hero p{margin:14px 0;opacity:.95}
-.hero-btn{background:#ff3b30;color:white;border:0;padding:12px 22px;border-radius:25px;font-weight:800;cursor:pointer;margin-top:8px}
-.wrap{max-width:900px;margin:0 auto;padding:18px}
-.card{background:white;border-radius:16px;padding:20px;margin:16px 0;box-shadow:0 4px 18px rgba(0,0,0,.08);border-top:5px solid #0b5ed7}
-.card h2{color:#0b5ed7;margin-bottom:10px}
-.card h3{margin:14px 0 6px}
-.badge{display:inline-block;background:#ff3b30;color:white;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:800}
-.tool-img{width:100%;border-radius:12px;margin:8px 0;border:1px solid #ddd}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:600px){.grid{grid-template-columns:1fr}.hero h1{font-size:26px}}
-.dropdown{position:relative}
-.drop-content{display:none;position:absolute;right:0;top:42px;background:white;color:#222;width:230px;border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.2);overflow:hidden}
-.drop-content a{display:block;padding:12px 16px;text-decoration:none;color:#222;border-bottom:1px solid #eee}
-.drop-content a:hover{background:#eef5ff}
-.show{display:block}
-input{width:100%;padding:12px;border:1px solid #ccc;border-radius:10px;margin:8px 0}
-footer{text-align:center;padding:20px;color:#666;font-size:13px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#0A1E4A;color:#fff;overflow-x:hidden}
+a{text-decoration:none}
+
+/* HEADER - Gaya Minds, Putih Bersih */
+header{background:#fff;display:flex;align-items:center;justify-content:space-between;padding:12px 5%;position:sticky;top:0;z-index:100;box-shadow:0 2px 15px rgba(0,0,0,.2)}
+.logo-area{display:flex;align-items:center;gap:10px}
+.logo-area img{width:48px;height:48px;object-fit:contain;border-radius:10px;background:#0A1E4A}
+.logo-text{color:#0A1E4A;line-height:1}
+.logo-text b{font-size:22px;letter-spacing:1px}
+.logo-text span{font-size:11px;color:#E11D2E;font-weight:700}
+nav{display:flex;gap:25px}
+nav a{color:#0A1E4A;font-weight:600;font-size:14px}
+nav a:hover{color:#E11D2E}
+.header-btns{display:flex;gap:10px}
+.btn-red{background:#E11D2E;color:#fff;padding:10px 18px;border-radius:30px;font-weight:700;font-size:14px;border:none;cursor:pointer}
+.btn-outline{background:#fff;color:#0A1E4A;padding:10px 18px;border-radius:30px;font-weight:700;font-size:14px;border:2px solid #0A1E4A;cursor:pointer}
+
+/* HERO - Gabungan Pocket Option (Biru Tua) + Minds (Bagi 2) */
+.hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:60px 5%;background:radial-gradient(circle at 80% 20%, #143A7A 0%, #0A1E4A 55%, #050F26 100%)}
+.hero-left{flex:1;min-width:320px;max-width:580px}
+.badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:18px}
+.hero-left h1{font-size:52px;line-height:1.05;font-weight:900;text-transform:uppercase}
+.hero-left h1 span{color:#FF3B30}
+.hero-left p{margin:18px 0 25px;color:#CBD5E1;font-size:16px;line-height:1.6}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-white{background:#fff;color:#0A1E4A;padding:14px 22px;border-radius:30px;font-weight:800;cursor:pointer;border:none}
+.btn-ghost{background:transparent;color:#fff;padding:14px 22px;border-radius:30px;font-weight:800;cursor:pointer;border:1px solid #fff}
+.hero-card{margin-top:28px;background:#fff;color:#0A1E4A;border-radius:14px;padding:14px;display:flex;gap:12px;align-items:center;max-width:430px;cursor:pointer}
+.hero-card img{width:56px;height:56px;border-radius:10px;object-fit:cover}
+.hero-card b{font-size:14px}
+.hero-card small{color:#64748B}
+
+/* HERO KANAN - VISUAL */
+.hero-right{flex:1;min-width:320px;text-align:center;position:relative}
+.hero-visual{background:#fff;border-radius:20px;padding:10px;box-shadow:0 20px 50px rgba(0,0,0,.4);transform:rotate(1deg)}
+.hero-visual img{width:100%;border-radius:14px;height:280px;object-fit:cover;background:#ddd}
+.hero-visual h3{color:#0A1E4A;padding:12px 0 4px}
+.hero-visual p{color:#64748B;font-size:13px;padding-bottom:10px}
+.float-card{position:absolute;background:#fff;color:#0A1E4A;padding:10px 14px;border-radius:12px;font-weight:700;font-size:13px;box-shadow:0 10px 25px rgba(0,0,0,.3)}
+.fc1{top:20px;left:-10px}
+.fc2{bottom:30px;right:10px;background:#E11D2E;color:#fff}
+
+/* SECTION */
+.section{padding:50px 5%}
+.section-white{background:#F1F5F9;color:#0A1E4A}
+.section h2{font-size:32px;margin-bottom:8px}
+.section h2 span{color:#E11D2E}
+.sub{color:#94A3B8;margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:#fff;color:#0A1E4A;border-radius:16px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.15)}
+.card img{width:100%;height:170px;object-fit:cover;background:#CBD5E1}
+.card-body{padding:18px}
+.card-body h3{margin-bottom:8px}
+.card-body p{color:#64748B;font-size:14px;line-height:1.5;margin-bottom:14px}
+.tag{display:inline-block;background:#FEF2F2;color:#E11D2E;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:800;margin-bottom:10px}
+
+/* SOSIAL - LOGO ASLI PAKAI SVG */
+.social-grid{display:flex;gap:12px;flex-wrap:wrap}
+.social-btn{background:#fff;color:#0A1E4A;display:flex;align-items:center;gap:10px;padding:14px 18px;border-radius:14px;font-weight:700;min-width:190px}
+.social-btn svg{width:26px;height:26px}
+.social-btn small{display:block;font-weight:400;color:#64748B;font-size:11px}
+
+/* ADMIN */
+.admin-box{max-width:420px;margin:0 auto;background:#fff;color:#0A1E4A;padding:28px;border-radius:18px;text-align:center}
+.admin-box input{width:100%;padding:12px;margin:8px 0;border:1px solid #CBD5E1;border-radius:10px}
+.admin-box button{width:100%;padding:12px;background:#0A1E4A;color:#fff;border:none;border-radius:10px;font-weight:800;cursor:pointer;margin-top:10px}
+.hidden{display:none}
+footer{background:#050F26;text-align:center;padding:25px;color:#94A3B8;font-size:13px}
+@media(max-width:768px){nav{display:none}.hero-left h1{font-size:36px}.float-card{display:none}}
 </style>
 </head>
 <body>
 
 <header>
-<div class="logo">WORLAS<span>.IT</span></div>
-<nav>
-<div class="dropdown">
-<button class="btn" onclick="toggleSosmed()">SOSIAL MEDIA ▼</button>
-<div class="drop-content" id="sosmedBox">
-<a href="https://instagram.com/ajiwahyu22" target="_blank">📸 Instagram - @ajiwahyu22</a>
-<a href="https://tiktok.com/@orangkeempat" target="_blank">🎵 TikTok - @ORANGKEEMPAT</a>
-<a href="https://youtube.com/@SYAHRONIERU" target="_blank">▶️ YouTube - SYAHRONI ERU</a>
-<a href="https://wa.me/6281554246103" target="_blank">💬 WhatsApp - 0815-5424-6103</a>
-</div>
-</div>
-<button class="btn btn-red" onclick="showLogin()">🔐 ADMIN</button>
-</nav>
+  <div class="logo-area">
+    <img src="logo.png" alt="WORLAS" onerror="this.src='https://via.placeholder.com/48x48/0A1E4A/FFFFFF?text=W'">
+    <div class="logo-text"><b>WORLAS.IT</b><br><span>KARYA • BELAJAR • JUALAN</span></div>
+  </div>
+  <nav>
+    <a href="#karya">Karya</a>
+    <a href="#produk">Produk</a>
+    <a href="#pkl">Laporan PKL</a>
+    <a href="#splicer">Splicer</a>
+  </nav>
+  <div class="header-btns">
+    <button class="btn-outline" onclick="showSection('sosial')">Sosial Media</button>
+    <button class="btn-red" onclick="showSection('admin')">Admin</button>
+  </div>
 </header>
 
-<!-- HALAMAN PUBLIK -->
-<div id="publicPage">
-<div class="hero">
-<span class="badge">DIBUAT SEJAK JANUARI 2026</span>
-<h1>Halo, Saya Aji Wahyu<br>Pemilik WORLAS.IT</h1>
-<p>Web ini dibuat untuk memperlihatkan hasil karya website yang sudah saya ukir dan pelajari dari nol.</p>
-<button class="hero-btn" onclick="document.getElementById('lovable').scrollIntoView({behavior:'smooth'})">LIHAT KARYA SAYA ↓</button>
-</div>
+<!-- HERO BARU -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="badge">✦ HALO, SAYA AJI WAHYU - PEMILIK WORLAS.IT</div>
+    <h1>TEMPAT YANG TEPAT<br>UNTUK LIHAT<br><span>KARYA WEB &<br>GAME 3D</span></h1>
+    <p>Semua karya di sini dibuat dari nol, dipelajari sendiri, dan dikembangkan bersama META.AI. Dari web, game 3D, sampai laporan PKL - semua ada di satu tempat.</p>
+    <div class="hero-btns">
+      <button class="btn-red" onclick="document.getElementById('karya').scrollIntoView({behavior:'smooth'})" style="padding:14px 22px;border-radius:30px;font-weight:800;border:none;cursor:pointer">LIHAT KARYA SAYA →</button>
+      <button class="btn-ghost" onclick="document.getElementById('produk').scrollIntoView({behavior:'smooth'})">BELI WORLAS LINKS</button>
+    </div>
+    <div class="hero-card" onclick="document.getElementById('pkl').scrollIntoView({behavior:'smooth'})">
+      <img src="https://via.placeholder.com/56x56/E11D2E/FFFFFF?text=PKL" alt="PKL">
+      <div><b>CONTOH LAPORAN PKL - Siap Download</b><br><small>Klik untuk lihat laporan lengkap UKK & PKL saya</small></div>
+      <b style="color:#E11D2E">→</b>
+    </div>
+  </div>
 
-<div class="wrap">
-<div class="card" id="lovable">
-<h2>✨ 2 Web Yang Saya Pamerkan Di Awal</h2>
-<p>Di awal perjalanan saya, ada 2 web yang paling penting dan mau saya pamerkan ke semua orang:</p>
-<div class="grid">
-<div style="background:#eef5ff;padding:16px;border-radius:12px">
-<h3>1. Lovable.dev</h3>
-<p><b>Tempat saya belajar membuat website.</b><br><br>
-Di Lovable.dev saya memperkenalkan cara pembuatan website yang simpel, gampang, dan dapat dikembangkan sendiri. Dari sini saya belajar bahwa bikin web itu tidak harus ribet, yang penting ada kemauan untuk mencoba dan mengembangkan.</p>
-<a href="https://lovable.dev" target="_blank" style="color:#0b5ed7;font-weight:800">Buka Lovable.dev →</a>
-</div>
-<div style="background:#fff0ef;padding:16px;border-radius:12px">
-<h3>2. Mable.gg</h3>
-<p><b>Web Game 3D saya.</b><br><br>
-Ini web game 3D yang saya cari selama saya belajar tentang web. Saya menemukan dan mengembangkan game ini karena saya penasaran bagaimana game 3D bisa jalan di dalam website. Ini bukti kalau belajar web itu bisa sampai ke game juga.</p>
-<a href="https://mable.gg" target="_blank" style="color:#ff3b30;font-weight:800">Mainkan Mable.gg →</a>
-</div>
-</div>
-</div>
+  <div class="hero-right">
+    <div class="float-card fc1">🎮 Game 3D Mable.gg</div>
+    <div class="hero-visual">
+      <img src="https://via.placeholder.com/600x280/0A1E4A/FFFFFF?text=WORLAS.IT+-+KARYA+AJI+WAHYU" alt="Karya Worlas">
+      <h3>WORLAS LINKS - Produk Digital</h3>
+      <p>Template web siap pakai untuk jualan & portofolio</p>
+    </div>
+    <div class="float-card fc2">⭐ 100% Karya Asli</div>
+  </div>
+</section>
 
-<div class="card">
-<h2>👋 Tentang Saya - WORLAS.IT</h2>
-<p><b>WORLAS.IT</b> adalah web yang dibuat dari bulan <b>Januari 2026</b> yang dirancang untuk memperlihatkan hasil karya website yang sudah diukir.</p><br>
-<p>Di sini saya memperkenalkan <b>Lovable.dev</b> sebagai pembuatan website yang simpel, gampang, dan dapat dikembangkan sendiri. Saya sebagai pemilik web WORLAS.IT mengembangkan web ini agar semua tahu bagaimana cara membuat web yang sederhana.</p><br>
-<p>Tidak hanya pembuatan web, saya juga membuat web game 3D <b>Mable.gg</b>. Saya bikin ini semua karena <b>AI</b> dan yang saya pakai adalah <b>META.AI</b>, sudah banyak mengajarkan bagaimana saya belajar tentang web ini.</p><br>
-<p>Ada 1 lagi, untuk pembuatan web melalui <b>XAMPP</b>. Di sini saya belajar banyak tentang web, dari yang database, SQL, dan lain-lain.</p><br>
-<p><b>Owner:</b> Syahroni Eru Wahyu Aji - Purwodadi</p>
-</div>
+<!-- KARYA -->
+<section class="section" id="karya">
+  <h2>KARYA <span>SAYA</span></h2>
+  <p class="sub">Dibuat dengan Lovable.dev, Mable.gg & META.AI</p>
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x170/143A7A/FFFFFF?text=Lovable.dev" alt="Lovable">
+      <div class="card-body"><span class="tag">WEB BUILDER</span><h3>Web dari Lovable.dev</h3><p>Web dibuat cepat dengan AI, tapi tetap saya edit sendiri sampai sesuai dengan maunya saya. Cocok untuk portofolio & jualan.</p><button class="btn-red" onclick="alert('Link Lovable.dev akan dibuka dari Admin')">Lihat Demo</button></div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x170/E11D2E/FFFFFF?text=Mable.gg+3D" alt="Mable">
+      <div class="card-body"><span class="tag">GAME 3D</span><h3>Game 3D dari Mable.gg</h3><p>Game 3D interaktif yang bisa dimainkan langsung di browser. Saya buat karakter, map, dan gameplay-nya sendiri.</p><button class="btn-red" onclick="alert('Link Mable.gg akan dibuka dari Admin')">Mainkan Game</button></div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x170/0F766E/FFFFFF?text=SPLICER" alt="Splicer">
+      <div class="card-body"><span class="tag">TEKNIK</span><h3>Splicer - Fiber Optik</h3><p>Alat untuk menyambung kabel fiber optik. Ini yang saya pelajari saat PKL. Hasil sambungan rapi, loss kecil, jaringan stabil.</p><button class="btn-red" onclick="document.getElementById('splicer').scrollIntoView({behavior:'smooth'})">Pelajari Splicer</button></div>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-<h2>🛒 Produk Saya - WORLAS LINKS</h2>
-<span class="badge">PRODUK DIJUAL</span>
-<h3>Punya Halaman Link Sendiri Kayak Saya?</h3>
-<p>Kamu tidak perlu lagi ribet pakai Lynk.id. Saya buatkan halaman khusus untuk kamu, isinya semua link kamu: Instagram, TikTok, YouTube, WhatsApp, semua kumpul jadi 1 link.</p><br>
-<p>✅ Desain Biru Putih elegan<br>✅ 1 Link untuk semua sosial media<br>✅ Bisa diedit kapan saja<br>✅ Langsung jadi, tidak ribet</p><br>
-<button class="hero-btn" onclick="window.open('https://wa.me/6281554246103?text=Halo%20Kak%2C%20saya%20mau%20beli%20WORLAS%20LINKS','_blank')">BELI SEKARANG - CHAT WA</button>
-<p style="font-size:13px;margin-top:8px;color:#666">Klik tombol di atas, langsung chat saya untuk tanya harga & pesan.</p>
-</div>
+<!-- PRODUK -->
+<section class="section section-white" id="produk">
+  <h2>PRODUK <span>WORLAS LINKS</span></h2>
+  <p class="sub" style="color:#64748B">Beli sekali, pakai selamanya. Template web siap pakai.</p>
+  <div class="grid">
+    <div class="card" style="border:2px solid #E11D2E">
+      <div class="card-body"><span class="tag">BEST SELLER</span><h3>Worlas Links - Basic</h3><p>1 halaman link, foto profil, tombol WhatsApp, Instagram, TikTok. Cocok untuk jualan & kreator.</p><h2 style="color:#E11D2E">Rp 25.000</h2><br><button class="btn-red" onclick="window.open('https://wa.me/6281234567890?text=Halo, saya mau beli Worlas Links Basic','_blank')">Beli via WhatsApp</button></div>
+    </div>
+    <div class="card">
+      <div class="card-body"><span class="tag">PRO</span><h3>Worlas Links - Pro</h3><p>Semua fitur Basic + Galeri foto, katalog produk, domain custom worlas.it, dan support update 1 bulan.</p><h2 style="color:#0A1E4A">Rp 50.000</h2><br><button class="btn-red" onclick="window.open('https://wa.me/6281234567890?text=Halo, saya mau beli Worlas Links Pro','_blank')">Beli via WhatsApp</button></div>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-<h2>📄 CONTOH LAPORAN PKL</h2>
-<p>Ini laporan PKL saya, saya bagikan ke publik agar bisa jadi contoh untuk adik kelas nanti yang mau buat laporan PKL. Silahkan dibaca dan dijadikan contoh, jangan di copy paste mentah-mentah ya.</p><br>
-<p><b>Judul:</b> Pemasangan & Penyambungan Fiber Optik Menggunakan Fusion Splicer<br>
-<b>Nama:</b> Syahroni Eru Wahyu Aji<br>
-<b>Jurusan:</b> Teknik Jaringan Komputer</p><br>
-<button class="btn" style="background:#0b5ed7;color:white" onclick="alert('Silahkan upload file PDF laporan kamu di GitHub dan ganti link tombol ini')">📖 BACA LAPORAN</button>
-<button class="btn" style="background:#ff3b30;color:white" onclick="alert('Silahkan upload file PDF laporan kamu di GitHub dan ganti link tombol ini')">⬇️ DOWNLOAD LAPORAN</button>
-</div>
+<!-- PKL -->
+<section class="section" id="pkl">
+  <h2>LAPORAN <span>PKL & UKK</span></h2>
+  <p class="sub">Laporan Praktik Kerja Lapangan & Ujian Kompetensi Keahlian - Aji Wahyu</p>
+  <div class="card" style="max-width:700px">
+    <div class="card-body"><span class="tag">DOKUMEN UKK</span><h3>Laporan PKL - Teknik Jaringan & Splicer Fiber Optik</h3><p>Berisi latar belakang, kegiatan harian PKL, cara penggunaan splicer, hasil pengukuran, dan kesimpulan. Laporan ini dibuat untuk keperluan UKK.</p><p><b>Isi Laporan:</b><br>1. Pendahuluan & Tujuan PKL<br>2. Profil Tempat PKL<br>3. Kegiatan & Penggunaan Splicer<br>4. Hasil & Pembahasan<br>5. Penutup & Saran</p><button class="btn-red" onclick="alert('Upload file laporan PDF kamu di GitHub dengan nama laporan-pkl.pdf, nanti tombol ini akan langsung download.')">Download Laporan (PDF)</button></div>
+  </div>
+</section>
 
-<div class="card">
-<h2>🔥 Apa Itu Splicer & Alat-Alatnya?</h2>
-<p><b>Splicer / Fusion Splicer</b> adalah alat untuk menyambung 2 kabel serat optik (fiber) menjadi satu dengan cara dilelehkan menggunakan busur listrik. Hasilnya sambungan jadi kuat dan sinyal hampir tidak hilang.</p>
-<h3>1. Fusion Splicer</h3>
-<p>Alat utama untuk mengelas fiber. Menyejajarkan 2 ujung fiber dengan presisi lalu melelehkannya.</p>
-<img class="tool-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Fusion_splicer_2010.jpg/640px-Fusion_splicer_2010.jpg" onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80'">
-<h3>2. Fiber Cleaver</h3>
-<p>Alat untuk memotong ujung fiber agar rata dan tegak lurus. Kalau potongannya miring, hasil splicing jadi jelek.</p>
-<img class="tool-img" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="Fiber Cleaver">
-<h3>3. Fiber Stripper / Miller</h3>
-<p>Alat untuk mengupas kulit kabel fiber sampai terlihat kaca fibernya, tanpa membuat fiber lecet.</p>
-<img class="tool-img" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80" alt="Fiber Stripper">
-<h3>4. Optical Power Meter (OPM)</h3>
-<p>Alat untuk mengecek kekuatan sinyal cahaya di dalam fiber setelah disambung, satuannya dBm.</p>
-<img class="tool-img" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80" alt="OPM">
-<h3>5. Protection Sleeve</h3>
-<p>Selongsong pelindung hasil lasan, dipanaskan agar menyusut dan melindungi sambungan agar tidak patah.</p>
-<p><b>Cara Kerja Singkat:</b> Kupas → Bersihkan → Potong pakai Cleaver → Masukkan ke Splicer → Las Otomatis → Lindungi pakai Sleeve → Cek pakai OPM</p>
-</div>
+<!-- SPLICER -->
+<section class="section section-white" id="splicer">
+  <h2>APA ITU <span>SPLICER?</span></h2>
+  <p class="sub" style="color:#64748B">Alat penting di dunia fiber optik</p>
+  <div class="grid">
+    <div class="card"><div class="card-body"><h3>🔧 Fungsi Splicer</h3><p>Menyambung 2 kabel fiber optik sampai menyatu sempurna. Kalau sambungannya bagus, internet jadi kenceng, gak putus-putus.</p></div></div>
+    <div class="card"><div class="card-body"><h3>📋 Cara Kerja</h3><p>1. Kupas kabel<br>2. Bersihkan serat<br>3. Potong presisi<br>4. Masukkan ke splicer<br>5. Splicer menyambung otomatis dengan panas</p></div></div>
+    <div class="card"><div class="card-body"><h3>✅ Hasil Bagus</h3><p>Loss di bawah 0.05 dB = bagus banget. Tampilannya rapi di layar splicer, tidak ada gelembung.</p></div></div>
+  </div>
+</section>
 
-</div>
-</div>
-
-<!-- LOGIN -->
-<div id="loginPage" style="display:none" class="wrap">
-<div class="card">
-<h2>🔐 Login Admin</h2>
-<p>Hanya untuk pemilik web.</p>
-<input id="user" placeholder="Username">
-<input id="pass" type="password" placeholder="Password">
-<button class="btn" style="background:#0b5ed7;color:white;width:100%" onclick="login()">MASUK</button>
-<button class="btn" style="width:100%;margin-top:8px" onclick="backPublic()">Kembali ke Beranda</button>
-<p id="loginMsg" style="color:red;margin-top:8px"></p>
-<p style="font-size:12px;color:#666;margin-top:10px">Username: admin | Password: worlas123 - bisa kamu ganti nanti di kode</p>
-</div>
-</div>
+<!-- SOSIAL MEDIA - LOGO ASLI -->
+<section class="section" id="sosial">
+  <h2>SOSIAL <span>MEDIA</span></h2>
+  <p class="sub">Follow & chat saya langsung</p>
+  <div class="social-grid">
+    <a class="social-btn" href="https://instagram.com/worlas.it" target="_blank">
+      <svg viewBox="0 0 24 24" fill="#E1306C"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8A6.2 6.2 0 1 0 18.2 12 6.2 6.2 0 0 0 12 5.8zm0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-11.8a1.4 1.4 0 1 0 1.4 1.4 1.4 1.4 0 0 0-1.4-1.4z"/></svg>
+      <span>Instagram<small>@worlas.it</small></span>
+    </a>
+    <a class="social-btn" href="https://tiktok.com/@worlas.it" target="_blank">
+      <svg viewBox="0 0 24 24" fill="#000"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+      <span>TikTok<small>@worlas.it</small></span>
+    </a>
+    <a class="social-btn" href="https://youtube.com/@worlas" target="_blank">
+      <svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+      <span>YouTube<small>WORLAS</small></span>
+    </a>
+    <a class="social-btn" href="https://wa.me/6281234567890" target="_blank">
+      <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.11.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.34zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.89 9.88zm8.42-18.3A11.82 11.82 0 0 0 12.04 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.41z"/></svg>
+      <span>WhatsApp<small>Chat Sekarang</small></span>
+    </a>
+  </div>
+  <p style="margin-top:15px;color:#CBD5E1;font-size:13px">Ganti link di atas dengan link Instagram / TikTok / YouTube / WhatsApp asli kamu di dalam kode.</p>
+</section>
 
 <!-- ADMIN -->
-<div id="adminPage" style="display:none" class="wrap">
-<div class="card"><h2>Selamat Datang, Admin 👑</h2><p>Ini halaman khusus kamu. Bagian Laporan, Splicer, dan Produk sudah dipindah ke publik agar bisa dilihat adik kelas.</p>
-<p><b>Jurnal PKL (Khusus Admin):</b><br>Hari 1: Pengenalan alat & keselamatan kerja<br>Hari 2: Belajar mengupas kabel fiber<br>Hari 3: Belajar memotong fiber pakai Cleaver<br>Hari 4: Belajar menyambung fiber pakai Splicer<br>Hari 5: Praktek tarik kabel & pasang ODP<br>Hari 6: Cek redaman pakai OPM</p>
-<button class="btn btn-red" onclick="logout()">KELUAR</button></div>
-</div>
+<section class="section" id="admin">
+  <div class="admin-box">
+    <h2 style="color:#0A1E4A">LOGIN <span style="color:#E11D2E">ADMIN</span></h2>
+    <p style="color:#64748B;font-size:13px;margin:8px 0">Hanya pemilik worlas.it</p>
+    <div id="loginForm">
+      <input type="text" id="user" placeholder="Username: admin">
+      <input type="password" id="pass" placeholder="Password: worlas123">
+      <label style="font-size:13px;display:flex;gap:6px;align-items:center"><input type="checkbox" onclick="togglePass()" style="width:auto;margin:0"> Lihat Password</label>
+      <p id="err" style="color:#E11D2E;font-size:13px;display:none">Username / Password salah, coba lagi Ji!</p>
+      <button onclick="login()">MASUK ADMIN</button>
+    </div>
+    <div id="adminPanel" class="hidden" style="text-align:left">
+      <h3>Selamat Datang, Aji Wahyu 👋</h3>
+      <p style="font-size:13px;color:#64748B;margin:8px 0">Ini panel admin kamu. Untuk UKK, kamu bisa jelaskan ini ke penguji.</p>
+      <ul style="font-size:14px;line-height:1.8;margin-left:18px">
+        <li>Total Karya: 3 (Lovable, Mable, Splicer)</li>
+        <li>Produk: Worlas Links Basic & Pro</li>
+        <li>Laporan PKL: Siap untuk UKK</li>
+      </ul>
+      <button onclick="logout()" style="background:#E11D2E">KELUAR</button>
+    </div>
+  </div>
+</section>
 
-<footer>© 2026 WORLAS.IT - Dibuat oleh Syahroni Eru Wahyu Aji | Belajar dari META.AI, Lovable.dev, XAMPP & Mable.gg</footer>
+<footer>© 2026 WORLAS.IT - Dibuat oleh Aji Wahyu • Karya, Belajar & Jualan</footer>
 
 <script>
-function toggleSosmed(){document.getElementById('sosmedBox').classList.toggle('show')}
-window.onclick=function(e){if(!e.target.matches('.btn')){var d=document.getElementById('sosmedBox');if(d&&d.classList.contains('show'))d.classList.remove('show')}}
-function showLogin(){document.getElementById('publicPage').style.display='none';document.getElementById('loginPage').style.display='block';document.getElementById('adminPage').style.display='none'}
-function backPublic(){document.getElementById('publicPage').style.display='block';document.getElementById('loginPage').style.display='none';document.getElementById('adminPage').style.display='none'}
-function login(){var u=document.getElementById('user').value;var p=document.getElementById('pass').value;if(u==='admin'&&p==='worlas123'){document.getElementById('loginPage').style.display='none';document.getElementById('adminPage').style.display='block'}else{document.getElementById('loginMsg').innerText='Username / Password salah!'}}
-function logout(){backPublic()}
+function showSection(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+function togglePass(){var p=document.getElementById('pass');p.type=p.type==='password'?'text':'password'}
+function login(){
+  var u=document.getElementById('user').value.trim();
+  var p=document.getElementById('pass').value.trim();
+  if(u==='admin' && p==='worlas123'){
+    document.getElementById('loginForm').classList.add('hidden');
+    document.getElementById('adminPanel').classList.remove('hidden');
+    document.getElementById('err').style.display='none';
+  } else {
+    document.getElementById('err').style.display='block';
+  }
+}
+function logout(){
+  document.getElementById('loginForm').classList.remove('hidden');
+  document.getElementById('adminPanel').classList.add('hidden');
+  document.getElementById('user').value='';document.getElementById('pass').value='';
+}
 </script>
 </body>
 </html>
