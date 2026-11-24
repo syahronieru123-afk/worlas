@@ -3,251 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WORLAS.IT - Karya Web & Game 3D | Aji Wahyu</title>
+<title>WORLAS.IT INOVASI - Syahroni Eru Wahyu Aji</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
-body{background:#0A1E4A;color:#fff;overflow-x:hidden}
-a{text-decoration:none}
-
-/* HEADER - Gaya Minds, Putih Bersih */
-header{background:#fff;display:flex;align-items:center;justify-content:space-between;padding:12px 5%;position:sticky;top:0;z-index:100;box-shadow:0 2px 15px rgba(0,0,0,.2)}
-.logo-area{display:flex;align-items:center;gap:10px}
-.logo-area img{width:48px;height:48px;object-fit:contain;border-radius:10px;background:#0A1E4A}
-.logo-text{color:#0A1E4A;line-height:1}
-.logo-text b{font-size:22px;letter-spacing:1px}
-.logo-text span{font-size:11px;color:#E11D2E;font-weight:700}
-nav{display:flex;gap:25px}
-nav a{color:#0A1E4A;font-weight:600;font-size:14px}
-nav a:hover{color:#E11D2E}
-.header-btns{display:flex;gap:10px}
-.btn-red{background:#E11D2E;color:#fff;padding:10px 18px;border-radius:30px;font-weight:700;font-size:14px;border:none;cursor:pointer}
-.btn-outline{background:#fff;color:#0A1E4A;padding:10px 18px;border-radius:30px;font-weight:700;font-size:14px;border:2px solid #0A1E4A;cursor:pointer}
-
-/* HERO - Gabungan Pocket Option (Biru Tua) + Minds (Bagi 2) */
-.hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:60px 5%;background:radial-gradient(circle at 80% 20%, #143A7A 0%, #0A1E4A 55%, #050F26 100%)}
-.hero-left{flex:1;min-width:320px;max-width:580px}
-.badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:18px}
-.hero-left h1{font-size:52px;line-height:1.05;font-weight:900;text-transform:uppercase}
-.hero-left h1 span{color:#FF3B30}
-.hero-left p{margin:18px 0 25px;color:#CBD5E1;font-size:16px;line-height:1.6}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn-white{background:#fff;color:#0A1E4A;padding:14px 22px;border-radius:30px;font-weight:800;cursor:pointer;border:none}
-.btn-ghost{background:transparent;color:#fff;padding:14px 22px;border-radius:30px;font-weight:800;cursor:pointer;border:1px solid #fff}
-.hero-card{margin-top:28px;background:#fff;color:#0A1E4A;border-radius:14px;padding:14px;display:flex;gap:12px;align-items:center;max-width:430px;cursor:pointer}
-.hero-card img{width:56px;height:56px;border-radius:10px;object-fit:cover}
-.hero-card b{font-size:14px}
-.hero-card small{color:#64748B}
-
-/* HERO KANAN - VISUAL */
-.hero-right{flex:1;min-width:320px;text-align:center;position:relative}
-.hero-visual{background:#fff;border-radius:20px;padding:10px;box-shadow:0 20px 50px rgba(0,0,0,.4);transform:rotate(1deg)}
-.hero-visual img{width:100%;border-radius:14px;height:280px;object-fit:cover;background:#ddd}
-.hero-visual h3{color:#0A1E4A;padding:12px 0 4px}
-.hero-visual p{color:#64748B;font-size:13px;padding-bottom:10px}
-.float-card{position:absolute;background:#fff;color:#0A1E4A;padding:10px 14px;border-radius:12px;font-weight:700;font-size:13px;box-shadow:0 10px 25px rgba(0,0,0,.3)}
-.fc1{top:20px;left:-10px}
-.fc2{bottom:30px;right:10px;background:#E11D2E;color:#fff}
-
-/* SECTION */
-.section{padding:50px 5%}
-.section-white{background:#F1F5F9;color:#0A1E4A}
-.section h2{font-size:32px;margin-bottom:8px}
-.section h2 span{color:#E11D2E}
-.sub{color:#94A3B8;margin-bottom:25px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.card{background:#fff;color:#0A1E4A;border-radius:16px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.15)}
-.card img{width:100%;height:170px;object-fit:cover;background:#CBD5E1}
-.card-body{padding:18px}
-.card-body h3{margin-bottom:8px}
-.card-body p{color:#64748B;font-size:14px;line-height:1.5;margin-bottom:14px}
-.tag{display:inline-block;background:#FEF2F2;color:#E11D2E;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:800;margin-bottom:10px}
-
-/* SOSIAL - LOGO ASLI PAKAI SVG */
-.social-grid{display:flex;gap:12px;flex-wrap:wrap}
-.social-btn{background:#fff;color:#0A1E4A;display:flex;align-items:center;gap:10px;padding:14px 18px;border-radius:14px;font-weight:700;min-width:190px}
-.social-btn svg{width:26px;height:26px}
-.social-btn small{display:block;font-weight:400;color:#64748B;font-size:11px}
-
-/* ADMIN */
-.admin-box{max-width:420px;margin:0 auto;background:#fff;color:#0A1E4A;padding:28px;border-radius:18px;text-align:center}
-.admin-box input{width:100%;padding:12px;margin:8px 0;border:1px solid #CBD5E1;border-radius:10px}
-.admin-box button{width:100%;padding:12px;background:#0A1E4A;color:#fff;border:none;border-radius:10px;font-weight:800;cursor:pointer;margin-top:10px}
-.hidden{display:none}
-footer{background:#050F26;text-align:center;padding:25px;color:#94A3B8;font-size:13px}
-@media(max-width:768px){nav{display:none}.hero-left h1{font-size:36px}.float-card{display:none}}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0b1220;color:#fff}
+a{color:inherit;text-decoration:none}
+.topbar{background:#0f172a;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900}
+.logo img{width:42px;height:42px;border-radius:50%;object-fit:cover;background:#fff}
+.topbar button{background:#22c55e;color:#000;border:0;padding:9px 14px;border-radius:999px;font-weight:800;cursor:pointer}
+.hero{padding:28px 16px;display:grid;gap:18px}
+@media(min-width:800px){.hero{grid-template-columns:1.2fr .8fr;max-width:1100px;margin:auto;padding:40px 20px}}
+.badge{background:#1e293b;display:inline-block;padding:6px 12px;border-radius:999px;font-size:13px;color:#a7f3d0}
+.hero h1{font-size:38px;line-height:1.1;margin:14px 0}
+.hero h1 span{color:#22c55e}
+.hero p{color:#cbd5e1;line-height:1.6}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn{padding:12px 18px;border-radius:999px;font-weight:800;border:0;cursor:pointer}
+.btn-green{background:#22c55e;color:#000}
+.btn-white{background:#fff;color:#000}
+.hero-card{background:linear-gradient(135deg,#22c55e,#0ea5e9);border-radius:20px;padding:22px;text-align:center}
+.hero-card img{width:100%;max-width:280px;border-radius:16px;background:#fff}
+.hero-card h2{margin-top:12px;font-size:26px}
+.hero-card p{color:#ecfdf5}
+.section{max-width:1100px;margin:auto;padding:20px}
+.card{background:#111c33;border:1px solid #1e293b;border-radius:18px;padding:18px;margin-bottom:16px}
+.card h3{margin-bottom:8px}
+.card p{color:#cbd5e1;line-height:1.6;font-size:14px}
+.grid{display:grid;gap:14px}
+@media(min-width:800px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.price{font-size:24px;font-weight:900;color:#22c55e;margin:10px 0}
+.small{font-size:13px;color:#94a3b8}
+input,textarea,select{width:100%;padding:12px;border-radius:12px;border:1px solid #334155;background:#0f172a;color:#fff;margin-top:8px}
+label{font-size:13px;color:#cbd5e1}
+.tool{display:flex;gap:12px;background:#0f172a;border:1px solid #1e293b;border-radius:14px;padding:12px;margin-top:10px}
+.tool b{font-size:32px}
+.footer{text-align:center;padding:24px;color:#94a3b8;font-size:13px}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="logo-area">
-       <img src="worlas_logo_1.png" alt="WORLAS" onerror="this.src='https://via.placeholder.com/48x48/0A1E4A/FFFFFF?text=W'">
-    <div class="logo-text"><b>WORLAS.IT</b><br><span>KARYA • BELAJAR • JUALAN</span></div>
-  </div>
-  <nav>
-    <a href="#karya">Karya</a>
-    <a href="#produk">Produk</a>
-    <a href="#pkl">Laporan PKL</a>
-    <a href="#splicer">Splicer</a>
-  </nav>
-  <div class="header-btns">
-    <button class="btn-outline" onclick="showSection('sosial')">Sosial Media</button>
-    <button class="btn-red" onclick="showSection('admin')">Admin</button>
-  </div>
-</header>
+<div class="topbar">
+  <div class="logo"><img src="worlas_logo_1.png" alt="Worlas"> WORLAS.IT INOVASI</div>
+  <button onclick="document.getElementById('sosmed').scrollIntoView({behavior:'smooth'})">🌐 Sosial Media</button>
+</div>
 
-<!-- HERO BARU -->
-<section class="hero" id="home">
-  <div class="hero-left">
-    <div class="badge">✦ HALO, SAYA AJI WAHYU - PEMILIK WORLAS.IT</div>
-    <h1>TEMPAT YANG TEPAT<br>UNTUK LIHAT<br><span>KARYA WEB &<br>GAME 3D</span></h1>
-    <p>Semua karya di sini dibuat dari nol, dipelajari sendiri, dan dikembangkan bersama META.AI. Dari web, game 3D, sampai laporan PKL - semua ada di satu tempat.</p>
-    <div class="hero-btns">
-      <button class="btn-red" onclick="document.getElementById('karya').scrollIntoView({behavior:'smooth'})" style="padding:14px 22px;border-radius:30px;font-weight:800;border:none;cursor:pointer">LIHAT KARYA SAYA →</button>
-      <button class="btn-ghost" onclick="document.getElementById('produk').scrollIntoView({behavior:'smooth'})">BELI WORLAS LINKS</button>
+<div class="hero">
+  <div>
+    <span class="badge">SMKN 12 MALANG • XI TJKT 1 • PKL LJN</span>
+    <h1>Karya <span>SYAHRONI ERU<br>WAHYU AJI</span><br>untuk UKK & Bisnis Digital.</h1>
+    <p>Halo, saya Syahroni Eru Wahyu Aji. Web ini untuk laporan PKL di PT Lintas Jaringan Nusantara, jasa splicer fiber optik, jasa bikin web, jasa bikin game, dan produk digital saya.</p>
+    <div class="btns">
+      <a href="https://mable.gg/u/mb0e9hx1?locale=en" target="_blank"><button class="btn btn-green">🎮 Mainkan Game Saya</button></a>
+      <a href="laporan-pkl.docx" download><button class="btn btn-white">📄 Download Laporan PKL</button></a>
     </div>
-    <div class="hero-card" onclick="document.getElementById('pkl').scrollIntoView({behavior:'smooth'})">
-      <img src="https://via.placeholder.com/56x56/E11D2E/FFFFFF?text=PKL" alt="PKL">
-      <div><b>CONTOH LAPORAN PKL - Siap Download</b><br><small>Klik untuk lihat laporan lengkap UKK & PKL saya</small></div>
-      <b style="color:#E11D2E">→</b>
+    <p class="small" style="margin-top:12px">NIS: 9192 • PT Lintas Jaringan Nusantara Subnet Malang • 05 Jan - 30 Juni 2026</p>
+  </div>
+  <div class="hero-card">
+    <img src="worlas_logo_1.png" alt="Worlas Logo">
+    <h2>WORLAS.IT INOVASI</h2>
+    <p>Jaringan • Web • Game • Digital</p>
+    <p style="margin-top:10px;font-size:13px">by Syahroni Eru Wahyu Aji</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="card">
+    <h3>📄 Laporan PKL - PT Lintas Jaringan Nusantara</h3>
+    <p>Laporan lengkap PKL saya di Lintas Jaringan Nusantara Subnet Malang. Mulai dari Router, NOC, Customer Service, sampai aktivitas kerja harian.</p>
+    <div class="btns">
+      <a href="laporan-pkl.docx" download><button class="btn btn-green">Download Laporan (DOCX)</button></a>
+      <a href="https://wa.me/6281554246103?text=Halo%20Aji,%20saya%20mau%20tanya%20laporan%20PKL" target="_blank"><button class="btn btn-white">Tanya via WA</button></a>
     </div>
+    <p class="small">Cara pasang: upload file laporan kamu ke GitHub dengan nama <b>laporan-pkl.docx</b> di folder yang sama dengan index.html</p>
   </div>
 
-  <div class="hero-right">
-    <div class="float-card fc1">🎮 Game 3D Mable.gg</div>
-    <div class="hero-visual">
-      <img src="https://via.placeholder.com/600x280/0A1E4A/FFFFFF?text=WORLAS.IT+-+KARYA+AJI+WAHYU" alt="Karya Worlas">
-      <h3>WORLAS LINKS - Produk Digital</h3>
-      <p>Template web siap pakai untuk jualan & portofolio</p>
-    </div>
-    <div class="float-card fc2">⭐ 100% Karya Asli</div>
-  </div>
-</section>
-
-<!-- KARYA -->
-<section class="section" id="karya">
-  <h2>KARYA <span>SAYA</span></h2>
-  <p class="sub">Dibuat dengan Lovable.dev, Mable.gg & META.AI</p>
+  <h2 style="margin:18px 0 12px">🛒 Produk Saya - Harga 10-20 Ribu</h2>
   <div class="grid">
     <div class="card">
-      <img src="https://via.placeholder.com/400x170/143A7A/FFFFFF?text=Lovable.dev" alt="Lovable">
-      <div class="card-body"><span class="tag">WEB BUILDER</span><h3>Web dari Lovable.dev</h3><p>Web dibuat cepat dengan AI, tapi tetap saya edit sendiri sampai sesuai dengan maunya saya. Cocok untuk portofolio & jualan.</p><button class="btn-red" onclick="alert('Link Lovable.dev akan dibuka dari Admin')">Lihat Demo</button></div>
+      <h3>1. Jasa Membuat Web</h3>
+      <p>Dibuat pakai Lovable.dev. Cocok untuk web portofolio, web jualan, web link. Bisa request warna & tulisan. Jadi 1-2 hari.</p>
+      <div class="price">Rp 15.000</div>
+      <a href="https://lovable.dev/dashboard" target="_blank"><button class="btn btn-green" style="width:100%">Lihat Contoh Web</button></a>
+      <a href="https://wa.me/6281554246103?text=Halo%20Aji,%20saya%20mau%20pesan%20Jasa%20Bikin%20Web%20Rp15.000" target="_blank"><button class="btn btn-white" style="width:100%;margin-top:8px">Pesan via WA</button></a>
+      <p class="small">Ganti link di atas ke link .lovable.app publik kamu kalau sudah publish.</p>
     </div>
     <div class="card">
-      <img src="https://via.placeholder.com/400x170/E11D2E/FFFFFF?text=Mable.gg+3D" alt="Mable">
-      <div class="card-body"><span class="tag">GAME 3D</span><h3>Game 3D dari Mable.gg</h3><p>Game 3D interaktif yang bisa dimainkan langsung di browser. Saya buat karakter, map, dan gameplay-nya sendiri.</p><button class="btn-red" onclick="alert('Link Mable.gg akan dibuka dari Admin')">Mainkan Game</button></div>
+      <h3>2. Jasa Membuat Game</h3>
+      <p>Dibuat pakai Mable.gg. Game 3D simple yang bisa langsung dimainkan di HP. Bisa request tema: balapan, petualangan, dll.</p>
+      <div class="price">Rp 20.000</div>
+      <a href="https://mable.gg/u/mb0e9hx1?locale=en" target="_blank"><button class="btn btn-green" style="width:100%">Mainkan Game Saya</button></a>
+      <a href="https://wa.me/6281554246103?text=Halo%20Aji,%20saya%20mau%20pesan%20Jasa%20Bikin%20Game%20Mable%20Rp20.000" target="_blank"><button class="btn btn-white" style="width:100%;margin-top:8px">Pesan via WA</button></a>
     </div>
     <div class="card">
-      <img src="https://via.placeholder.com/400x170/0F766E/FFFFFF?text=SPLICER" alt="Splicer">
-      <div class="card-body"><span class="tag">TEKNIK</span><h3>Splicer - Fiber Optik</h3><p>Alat untuk menyambung kabel fiber optik. Ini yang saya pelajari saat PKL. Hasil sambungan rapi, loss kecil, jaringan stabil.</p><button class="btn-red" onclick="document.getElementById('splicer').scrollIntoView({behavior:'smooth'})">Pelajari Splicer</button></div>
+      <h3>3. Produk di Lynk.id</h3>
+      <p>Produk digital saya di Lynk.id. Belinya langsung lewat Lynk, tanpa chat, langsung download.</p>
+      <div class="price">Rp 10.000</div>
+      <a href="https://lynk.id/admin/my-lynks/home" target="_blank"><button class="btn btn-green" style="width:100%">Beli di Lynk.id</button></a>
+      <a href="https://wa.me/6281554246103?text=Halo%20Aji,%20saya%20mau%20tanya%20produk%20Lynk%20Rp10.000" target="_blank"><button class="btn btn-white" style="width:100%;margin-top:8px">Tanya via WA</button></a>
+      <p class="small">Ganti link di atas ke link publik lynk.id kamu, jangan link admin.</p>
     </div>
   </div>
-</section>
 
-<!-- PRODUK -->
-<section class="section section-white" id="produk">
-  <h2>PRODUK <span>WORLAS LINKS</span></h2>
-  <p class="sub" style="color:#64748B">Beli sekali, pakai selamanya. Template web siap pakai.</p>
-  <div class="grid">
-    <div class="card" style="border:2px solid #E11D2E">
-      <div class="card-body"><span class="tag">BEST SELLER</span><h3>Worlas Links - Basic</h3><p>1 halaman link, foto profil, tombol WhatsApp, Instagram, TikTok. Cocok untuk jualan & kreator.</p><h2 style="color:#E11D2E">Rp 25.000</h2><br><button class="btn-red" onclick="window.open('https://wa.me/6281234567890?text=Halo, saya mau beli Worlas Links Basic','_blank')">Beli via WhatsApp</button></div>
+  <div class="card" id="splicer">
+    <h3>🔧 Splicer Fiber Optik - Lengkap + Form Splicer</h3>
+    <p>Splicer adalah proses menyambung 2 kabel fiber optik agar sinyal internet tidak putus. Di PKL saya belajar ini di Lintas Jaringan Nusantara.</p>
+    <div class="tool"><b>1️⃣</b><div><b>Fusion Splicer</b><br><span class="small">Alat utama untuk menyambung serat fiber dengan panas. Hasil sambungan paling kuat & loss kecil.</span></div></div>
+    <div class="tool"><b>2️⃣</b><div><b>Cleaver / Pemotong Fiber</b><br><span class="small">Untuk memotong ujung fiber biar rata 90 derajat. Kalau miring, sambungan gagal.</span></div></div>
+    <div class="tool"><b>3️⃣</b><div><b>Stripper</b><br><span class="small">Untuk mengupas jaket kabel & coating fiber tanpa merusak serat dalamnya.</span></div></div>
+    <div class="tool"><b>4️⃣</b><div><b>Alkohol + Tissue</b><br><span class="small">Untuk membersihkan fiber dari kotoran & minyak sebelum disambung.</span></div></div>
+    <div class="tool"><b>5️⃣</b><div><b>Protection Sleeve</b><br><span class="small">Pelindung sambungan, dipanaskan di heater splicer biar sambungan aman & tidak patah.</span></div></div>
+    <p style="margin-top:14px"><b>Cara Kerja:</b> Kupas kabel → Bersihkan → Potong pakai Cleaver → Masukkan ke Fusion Splicer → Splicing → Cek Loss → Pasang Sleeve → Selesai. Hasil bagus kalau Loss &lt; 0.05 dB.</p>
+
+    <h3 style="margin-top:18px">📝 Form Splicer - Pesan / Tanya Jasa Splicer</h3>
+    <label>Nama Kamu</label>
+    <input id="sp-nama" placeholder="Contoh: Budi">
+    <label>Mau pesan / tanya apa?</label>
+    <select id="sp-jenis">
+      <option>Tanya Cara Splicer</option>
+      <option>Pesan Jasa Splicer - Perbaiki Internet Putus</option>
+      <option>Pesan Jasa Tarik Kabel Fiber</option>
+      <option>Lainnya</option>
+    </select>
+    <label>Pesan</label>
+    <textarea id="sp-pesan" rows="3" placeholder="Lokasi kamu dimana? Internetnya kenapa?"></textarea>
+    <button class="btn btn-green" style="width:100%;margin-top:12px" onclick="kirimSplicer()">Kirim ke WhatsApp Aji</button>
+  </div>
+
+  <div class="card" id="sosmed">
+    <h3>🌐 Form Sosial Media - Semua Jadi 1</h3>
+    <p>Semua sosial media saya jadi 1 di sini. Klik aja, langsung kebuka.</p>
+    <div class="grid" style="margin-top:12px">
+      <a href="https://instagram.com/ajiwahyu22" target="_blank"><button class="btn btn-white" style="width:100%">📸 Instagram<br>@ajiwahyu22</button></a>
+      <a href="https://tiktok.com/@eruaja" target="_blank"><button class="btn btn-white" style="width:100%">🎵 TikTok<br>@eruaja</button></a>
+      <a href="https://youtube.com/@syahronieru" target="_blank"><button class="btn btn-white" style="width:100%">▶️ YouTube<br>syahroni eru</button></a>
+      <a href="https://wa.me/6281554246103" target="_blank"><button class="btn btn-green" style="width:100%">💬 WhatsApp<br>081554246103</button></a>
     </div>
-    <div class="card">
-      <div class="card-body"><span class="tag">PRO</span><h3>Worlas Links - Pro</h3><p>Semua fitur Basic + Galeri foto, katalog produk, domain custom worlas.it, dan support update 1 bulan.</p><h2 style="color:#0A1E4A">Rp 50.000</h2><br><button class="btn-red" onclick="window.open('https://wa.me/6281234567890?text=Halo, saya mau beli Worlas Links Pro','_blank')">Beli via WhatsApp</button></div>
-    </div>
+    <h3 style="margin-top:18px">Kirim Pesan Cepat</h3>
+    <label>Nama Kamu</label>
+    <input id="sm-nama" placeholder="Nama kamu">
+    <label>Mau tanya apa?</label>
+    <textarea id="sm-pesan" rows="2" placeholder="Mau pesan web / game / splicer?"></textarea>
+    <button class="btn btn-green" style="width:100%;margin-top:12px" onclick="kirimSosmed()">Kirim ke WA Aji</button>
   </div>
-</section>
+</div>
 
-<!-- PKL -->
-<section class="section" id="pkl">
-  <h2>LAPORAN <span>PKL & UKK</span></h2>
-  <p class="sub">Laporan Praktik Kerja Lapangan & Ujian Kompetensi Keahlian - Aji Wahyu</p>
-  <div class="card" style="max-width:700px">
-    <div class="card-body"><span class="tag">DOKUMEN UKK</span><h3>Laporan PKL - Teknik Jaringan & Splicer Fiber Optik</h3><p>Berisi latar belakang, kegiatan harian PKL, cara penggunaan splicer, hasil pengukuran, dan kesimpulan. Laporan ini dibuat untuk keperluan UKK.</p><p><b>Isi Laporan:</b><br>1. Pendahuluan & Tujuan PKL<br>2. Profil Tempat PKL<br>3. Kegiatan & Penggunaan Splicer<br>4. Hasil & Pembahasan<br>5. Penutup & Saran</p><button class="btn-red" onclick="alert('Upload file laporan PDF kamu di GitHub dengan nama laporan-pkl.pdf, nanti tombol ini akan langsung download.')">Download Laporan (PDF)</button></div>
-  </div>
-</section>
-
-<!-- SPLICER -->
-<section class="section section-white" id="splicer">
-  <h2>APA ITU <span>SPLICER?</span></h2>
-  <p class="sub" style="color:#64748B">Alat penting di dunia fiber optik</p>
-  <div class="grid">
-    <div class="card"><div class="card-body"><h3>🔧 Fungsi Splicer</h3><p>Menyambung 2 kabel fiber optik sampai menyatu sempurna. Kalau sambungannya bagus, internet jadi kenceng, gak putus-putus.</p></div></div>
-    <div class="card"><div class="card-body"><h3>📋 Cara Kerja</h3><p>1. Kupas kabel<br>2. Bersihkan serat<br>3. Potong presisi<br>4. Masukkan ke splicer<br>5. Splicer menyambung otomatis dengan panas</p></div></div>
-    <div class="card"><div class="card-body"><h3>✅ Hasil Bagus</h3><p>Loss di bawah 0.05 dB = bagus banget. Tampilannya rapi di layar splicer, tidak ada gelembung.</p></div></div>
-  </div>
-</section>
-
-<!-- SOSIAL MEDIA - LOGO ASLI -->
-<section class="section" id="sosial">
-  <h2>SOSIAL <span>MEDIA</span></h2>
-  <p class="sub">Follow & chat saya langsung</p>
-  <div class="social-grid">
-    <a class="social-btn" href="https://instagram.com/worlas.it" target="_blank">
-      <svg viewBox="0 0 24 24" fill="#E1306C"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8A6.2 6.2 0 1 0 18.2 12 6.2 6.2 0 0 0 12 5.8zm0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-11.8a1.4 1.4 0 1 0 1.4 1.4 1.4 1.4 0 0 0-1.4-1.4z"/></svg>
-      <span>Instagram<small>@worlas.it</small></span>
-    </a>
-    <a class="social-btn" href="https://tiktok.com/@worlas.it" target="_blank">
-      <svg viewBox="0 0 24 24" fill="#000"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
-      <span>TikTok<small>@worlas.it</small></span>
-    </a>
-    <a class="social-btn" href="https://youtube.com/@worlas" target="_blank">
-      <svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
-      <span>YouTube<small>WORLAS</small></span>
-    </a>
-    <a class="social-btn" href="https://wa.me/6281234567890" target="_blank">
-      <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.11.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.34zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.89 9.88zm8.42-18.3A11.82 11.82 0 0 0 12.04 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.41z"/></svg>
-      <span>WhatsApp<small>Chat Sekarang</small></span>
-    </a>
-  </div>
-  <p style="margin-top:15px;color:#CBD5E1;font-size:13px">Ganti link di atas dengan link Instagram / TikTok / YouTube / WhatsApp asli kamu di dalam kode.</p>
-</section>
-
-<!-- ADMIN -->
-<section class="section" id="admin">
-  <div class="admin-box">
-    <h2 style="color:#0A1E4A">LOGIN <span style="color:#E11D2E">ADMIN</span></h2>
-    <p style="color:#64748B;font-size:13px;margin:8px 0">Hanya pemilik worlas.it</p>
-    <div id="loginForm">
-      <input type="text" id="user" placeholder="Username: admin">
-      <input type="password" id="pass" placeholder="Password: worlas123">
-      <label style="font-size:13px;display:flex;gap:6px;align-items:center"><input type="checkbox" onclick="togglePass()" style="width:auto;margin:0"> Lihat Password</label>
-      <p id="err" style="color:#E11D2E;font-size:13px;display:none">Username / Password salah, coba lagi Ji!</p>
-      <button onclick="login()">MASUK ADMIN</button>
-    </div>
-    <div id="adminPanel" class="hidden" style="text-align:left">
-      <h3>Selamat Datang, Aji Wahyu 👋</h3>
-      <p style="font-size:13px;color:#64748B;margin:8px 0">Ini panel admin kamu. Untuk UKK, kamu bisa jelaskan ini ke penguji.</p>
-      <ul style="font-size:14px;line-height:1.8;margin-left:18px">
-        <li>Total Karya: 3 (Lovable, Mable, Splicer)</li>
-        <li>Produk: Worlas Links Basic & Pro</li>
-        <li>Laporan PKL: Siap untuk UKK</li>
-      </ul>
-      <button onclick="logout()" style="background:#E11D2E">KELUAR</button>
-    </div>
-  </div>
-</section>
-
-<footer>© 2026 WORLAS.IT - Dibuat oleh Aji Wahyu • Karya, Belajar & Jualan</footer>
+<div class="footer">WORLAS.IT INOVASI © 2026 • Syahroni Eru Wahyu Aji • SMKN 12 Malang • XI TJKT 1<br>IG @ajiwahyu22 • TikTok @eruaja • YouTube syahroni eru • WA 081554246103</div>
 
 <script>
-function showSection(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
-function togglePass(){var p=document.getElementById('pass');p.type=p.type==='password'?'text':'password'}
-function login(){
-  var u=document.getElementById('user').value.trim();
-  var p=document.getElementById('pass').value.trim();
-  if(u==='admin' && p==='worlas123'){
-    document.getElementById('loginForm').classList.add('hidden');
-    document.getElementById('adminPanel').classList.remove('hidden');
-    document.getElementById('err').style.display='none';
-  } else {
-    document.getElementById('err').style.display='block';
-  }
+function kirimSplicer(){
+  var n=document.getElementById('sp-nama').value;
+  var j=document.getElementById('sp-jenis').value;
+  var p=document.getElementById('sp-pesan').value;
+  var teks="Halo Aji, saya "+n+" mau "+j+". Pesan: "+p;
+  window.open("https://wa.me/6281554246103?text="+encodeURIComponent(teks),"_blank");
 }
-function logout(){
-  document.getElementById('loginForm').classList.remove('hidden');
-  document.getElementById('adminPanel').classList.add('hidden');
-  document.getElementById('user').value='';document.getElementById('pass').value='';
+function kirimSosmed(){
+  var n=document.getElementById('sm-nama').value;
+  var p=document.getElementById('sm-pesan').value;
+  var teks="Halo Aji, saya "+n+". "+p;
+  window.open("https://wa.me/6281554246103?text="+encodeURIComponent(teks),"_blank");
 }
 </script>
 </body>
